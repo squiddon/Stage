@@ -770,7 +770,8 @@ void ModelPosition::WaypointVis::Visualize(Model *mod, Camera *cam)
   glLineWidth(1);
 
   // draw lines connecting the waypoints
-  const size_t num(waypoints.size());
+  // TODO add switch, but for now not needed
+  /*const size_t num(waypoints.size());
   if (num > 1) {
     pos->PushColor(1, 0, 0, 0.3);
     glBegin(GL_LINES);
@@ -786,7 +787,7 @@ void ModelPosition::WaypointVis::Visualize(Model *mod, Camera *cam)
     glEnd();
 
     pos->PopColor();
-  }
+  }*/
 
   pos->PopColor();
   glPopMatrix();
@@ -820,7 +821,8 @@ void ModelPosition::Waypoint::Draw() const
   glVertex3f(pose.x, pose.y, pose.z);
   glEnd();
 
-  meters_t quiver_length = 0.15;
+  // TODO add switch, but for now not needed
+  /*meters_t quiver_length = 0.15;
 
   double dx = cos(pose.a) * quiver_length;
   double dy = sin(pose.a) * quiver_length;
@@ -828,5 +830,5 @@ void ModelPosition::Waypoint::Draw() const
   glBegin(GL_LINES);
   glVertex3f(pose.x, pose.y, pose.z);
   glVertex3f(pose.x + dx, pose.y + dy, pose.z);
-  glEnd();
+  glEnd();*/
 }
